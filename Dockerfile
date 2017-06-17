@@ -7,7 +7,7 @@ ENV ssr_key 123456780
 RUN apt-get update && \
 apt-get clean  
 
-RUN apt-get install -y openssh-server python python-pip python-m2crypto libnet1-dev libpcap0.8-dev git gcc supervisor && \
+RUN apt-get install -y openssh-server python python-pip python-m2crypto libnet1-dev libpcap0.8-dev git gcc supervisor vim && \
 apt-get clean
 
 COPY supervisord.conf /etc/supervisord.conf

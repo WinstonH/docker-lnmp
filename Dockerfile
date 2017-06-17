@@ -25,7 +25,7 @@ RUN mv net_speeder /usr/local/bin/
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh /usr/local/bin/net_speeder
 
-EXPOSE 22 80 443 8080 8989
+EXPOSE 22 80 443 3306 8080 8989
 
 # Configure container to run as an executable
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

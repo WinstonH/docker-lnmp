@@ -2,8 +2,6 @@
 FROM ubuntu:14.04
 MAINTAINER https://github.com/WinstonH
 
-ENV ssr_key 123456780
-
 RUN apt-get update && \
 apt-get clean  
 

@@ -13,7 +13,8 @@ COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN echo "root:root"|chpasswd && \
     sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config && \
     sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config && \
-    git clone https://github.com/snooda/net-speeder.git net-speeder
+    git clone https://github.com/snooda/net-speeder.git net-speeder && \
+    git clone https://github.com/shadowsocksr-rm/shadowsocksr.git ssr
 WORKDIR net-speeder
 RUN sh build.sh && mv net_speeder /usr/local/bin/ && \
     chmod +x /usr/local/bin/entrypoint.sh /usr/local/bin/net_speeder

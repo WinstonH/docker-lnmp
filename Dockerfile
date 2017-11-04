@@ -1,5 +1,5 @@
 # ssr-with-net-speeder
-FROM ubuntu:14.04
+FROM ubuntu:17.04
 MAINTAINER https://github.com/WinstonH
 
 RUN apt-get update && \
